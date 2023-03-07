@@ -20,3 +20,11 @@ assertEqual(result[1], "Labs");
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 tail(words);
 assertEqual(words.length, 3);
+
+ let reverse = function(word){
+  let reversed;
+  for(let i = word.length; i > 0; i++){
+    reversed.push(i)
+
+  }
+ } 
