@@ -7,17 +7,17 @@ const assertEqual = function (actual, expected) {
 };
 
 const countOnly = function (allItems, itemsToCount) {
-  let counted = {};
-  for (let item in itemsToCount) {
+  const results = {}
+  for (const item of allItems) {
     if (itemsToCount[item]) {
-      const itemCount = allItems.filter(itm => itm === item).length
-      counted[item] = itemCount > 0 ? itemCount : undefined
+      if (results[item]) {
+        results[item] += 1;
+      } else {
+        results[item] = 1;
+      }
+      console.log
     }
-  }
-  for (let item in counted) {
-    if (!counted[item]) delete counted[item];
-  }
-  return counted;
+  } return results;
 }
 
 const firstNames = [
@@ -39,7 +39,6 @@ const result1 = countOnly(firstNames, {
   "Agouhanna": false
 });
 
-console.log(result1)
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
