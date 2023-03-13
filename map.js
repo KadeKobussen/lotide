@@ -45,4 +45,17 @@ assertArraysEqual(map(words, word => word.length), [ 6, 7, 2, 5, 3 ]);
 const results3 = map(words, word => word.toUpperCase());
 console.log(results3);
 
-assertArraysEqual(map(words, word => word.toUpperCase()), [ 'GROUND', 'CONTROL', 'TO', 'MAJOR', 'TOM' ])
+assertArraysEqual(map(words, word => word.toUpperCase()), [ 'GROUND', 'CONTROL', 'TO', 'MAJOR', 'TOM' ]) 
+
+const camelCase = function(input) {
+  let newStr = ''
+  for(let char of input){
+    if(char !== ' '){ newStr += char  
+    } 
+  }
+  return newStr
+};
+
+console.log(camelCase("this is a string"));
+console.log(camelCase("loopy lighthouse"));
+console.log(camelCase("supercalifragalisticexpialidocious"));
