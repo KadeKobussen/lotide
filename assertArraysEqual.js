@@ -1,5 +1,4 @@
 const eqArrays = function (arr1, arr2) {
-  let result;
   if (arr1.length !== arr2.length) {
     return false;
   }
@@ -17,3 +16,5 @@ const assertArraysEqual = function (arr1, arr2){
   } else {console.log(`💔💔💔Assertion Failed: ${arr1} !== ${arr2}`)}
   
 }
+
+module.exports = assertArraysEqual;
