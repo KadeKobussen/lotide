@@ -1,5 +1,6 @@
 const assertEqual = require('../assertEqual');
 
-assertEqual("bootcamp", "bootcamp");
 
+assertEqual("bootcamp", "bootcamp");
+ 
 
